@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3f5f8f;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: #474747;
+    border: 5px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.8);
+    width: 420px;
+    height: 640px;
+    margin-left: 50%;
+    margin-top: 3%;
+    transform: translate(-50%);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid>button {
+    font-family: 'Rubik', sans-serif;
+    border: 5px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 4rem;
+    border: 1px, solid #fff;
+    outline: none;
+    background: radial-gradient(#008c91, #02ebf3);
+}
+
+.calculator-grid>button:hover {
+    background: #003638;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.calculator-grid .del {
+    font-size: 2.5rem;
+}
+
+.calculator-grid .clear {
+    color: #000;
+    background: radial-gradient(#860101, #f30202);
+    font-size: 2.5rem;
+}
+
+.calculator-grid .equals {
+    color: #fff;
+    background: radial-gradient(#000, #222222);
+}
+
+.calculator-grid .clear:hover {
+    background: #000;
+    color: #ff0000;
+}
+
+.calculator-grid .equals:hover {
+    color: #000;
+    background: #fff;
+}
+
+.output {
+    font-family: 'Gemunu Libre', sans-serif;
+    border: 5px solid #000;
+    border-radius: 10px;
+    grid-column: 1 / -1;
+    background-color: #479201;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-calculation {
+    color: #1f4100;
+    font-size: 1rem;
+}
+
+.output .current-calculation {
+    color: #1f4100;
+    font-size: 2.25rem;
+}
